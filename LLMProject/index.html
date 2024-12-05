@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Structural Feature Prompts</h1>
+
+    <h3>System Prompt (Narrative Structure)</h3>
+    <div class="box">
+        <p>You are an expert natural language processing model specialized in analyzing texts related to sexual and
+            domestic violence on platforms like Reddit, focusing on \& extracting the important elements of Narrative
+            Structure. </p>
+    </div>
+
+    <h3>Input Prompt (Setting)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and identify the following features of the Setting of the
+            author's narrative structure in less than 10 words each. The features are described below for clarity:
+            <ol>
+                <li>Physical Location: Identify the physical location where the abuse occurred. Ensure that you choose from
+                    one of the following options only, nothing else: Home, Workplace, Public space, Private space, Online,
+                    Other.</li>
+                <li>Environmental Cues: Description of the environment in which the abuse occurred (e.g., presence of other
+                    people, isolated environment).</li>
+                <li>Pattern: Is the violence a single event, part of a longer period of ongoing abuse?
+                    Ensure that each feature is described using 5-10 words and that no names are mentioned. </li>
+                    <br>
+                    Format your response
+                    as:
+                    {Physical Location : Answer, Environmental Cues : Answer, Pattern : Answer}
+                    Return only this format, without any extra text. This is the input Reddit post:
+            </ol>
+           
+        </p>
+    </div>
+
+    <h3>Input Prompt (Characterisation)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and extract brief, high-level descriptions for the
+            following features relevant to the characterisation of the author's narrative in less than 10 words each.
+            The character features are described below for clarity:
+            <ol>
+                <li>Victim's Self Blame: If the victim portrays guilt regarding the abuse, including examples like
+                    responsibility for their or someone else's abuse, reflecting any internalized stigma or psychological
+                    manipulation by the abuser.</li>
+                <li>Abuser's Portrayal: Character traits of the abuser (e.g., aggressiveness, manipulative traits, authority
+                    role).</li>
+                <li>Supportive Figures: People who help in ending the abuse (e.g., friends, family, law enforcement), i.e.,
+                    positively influencing the victim in the situation. Ensure that this does not include the abuser or the
+                    victim.</li>
+                <li>Antagonistic Figures: People who disrupt ending the abuse (e.g., friends, family, law enforcement), i.e.,
+                    negatively influencing the victim in the situation. Ensure that this does not include the abuser or the
+                    victim.
+                    Ensure that each feature is described using less than 10 words and that no names are mentioned.</li>
+                    <br>
+                    Format your response as:
+                    {Victim Self Blame : Answer, Abuser Portrayal : Answer, Supportive Figures : Answer, Antagonistic Figures :
+                    Answer}
+                    Return only this format, without any extra text. This is the input Reddit post:
+            </ol>
+        </p>
+    </div>
+
+    <h3>Input Prompt (Plot)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and extract brief, high-level descriptions for the
+            following features relevant to the plot of the author's narrative in less than 10 words each. The features
+            are described below for clarity:
+            <ol>
+                <li>Main Event (Type of Abuse): Brief and high level description of the nature, degree and type of violence.
+                    Some examples are physical harm, financial control, emotional manipulation, sexual harm and so on.</li>
+            <li>Coping Actions: Actions taken by the victim in response to the abuse. Some examples are leaving the
+                abuser, seeking support, internal resolve and so on.</li>
+            <li>Challenges Faced: Specific obstacles complicating recovery from abuse or prevention of abuse. Some
+                examples are financial issues, custody of children and so on.
+                Ensure that no names are mentioned and that each feature is less than 10 words.</li>
+                <br>
+                Format your response as:
+                {Main Event : Answer, Coping Actions : Answer, Challenges Faced : Answer}
+                Return only this format, without any extra text. This is the input Reddit post:
+            </ol>
+        </p>
+    </div>
+
+    <h3>Input Prompt (Intention)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and extract the author’s main intention. The intention of
+            the author refers to the underlying purpose or motivation behind why they choose to share their story or
+            experiences online. It reflects what the author hopes to achieve, express, or communicate to others through
+            their post. Some examples are seeking support, offering advice, raising awareness, or processing their own
+            emotions, and so on.
+            Explain the intention briefly in less than 10 words. 
+            <br>
+            <br>
+            Format your response as:
+            {Intention: Intention of the author}
+            Return only this format, without any additional text. Do nothing else. This is the input Reddit post:
+        </p>
+    </div>
+
+    <!-- ======================================== Contextual Feature Prompt =============================================== -->
+
+    <h1>Contextual Feature Prompts</h1>
+
+
+    <h3>System Prompt (Relationship)</h3>
+    <div class="box">
+        <p>You are an NLP model specialized in analyzing texts related to sexual and domestic violence on social media.
+            Extract features about the victim (the person harmed by the action) and the perpetrator (the person
+            responsible for the harm). </p>
+    </div>
+
+    <h3>Input Prompt (Relationship)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and extract the relationship between the victim and the
+            perpetrator at the time of the incident (not the current relationship). Consider only information explicitly
+            available in the post and avoid making assumptions or inferences.
+            Select only one of the following options and use the provided definitions to guide your response:
+            <ol>
+                <li>Married Partner</li>
+                <li>Nonmarital Romantic Partner</li>
+                <li>Ex-Married Partner</li>
+                <li>Ex Nonmarital Romantic Partner</li>
+                <li>Direct Family Member</li>
+                <li>Indirect Family Member</li>
+                <li>Friend or Acquaintance</li>
+                <li>Co-worker or Colleague</li>
+                <li>Direct Authority Figure</li>
+                <li>Common Authority Figure</li>
+                <li>Stranger</li>
+                <li>Not Specified</li>
+                <br>
+                    Format your output as follows:
+                    {Relationship: relationship type}
+                    Return only this format with no additional text, explanations, or options.
+
+            </ol>
+            
+        </p>
+    </div>
+
+    <!-- ========================== Impact of Violence on Victim ======================================== -->
+
+    <h1>Impact of Violence on Victim</h1>
+
+    <h2>Mental Health</h2>
+
+    <h3>System Prompt (Mental Health Impacts)</h3>
+    <div class="box">
+        <p>You are an expert natural language processing model specialized in analyzing texts related to sexual and
+            domestic violence on social media platforms like Reddit. You help in identifing the mental health impacts of
+            violence on the victims. </p>
+    </div>
+
+    <h3>Input Prompt (Depression)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing
+            `Depression' due to the violence they encountered. The symptoms of Depression is described as follows:
+            A prolonged state of emotional distress characterized by persistent feelings of sadness, hopelessness, and a
+            lack of interest or pleasure in daily activities. Victims may struggle to find joy in things they once
+            enjoyed or feel emotionally numb.
+            Example: I feel numb, sad, and hopeless all the time, like nothing matters anymore. I don't know what to do.
+            <br>
+            <br>
+            Format your response as follows, with 'Yes' or 'No' indicating the presence of each impact:
+            {Depression: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+    <h3>Input Prompt (PTSD)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing ‘PTSD’
+            due to the violence they encountered. The symptoms of PTSD is described as follows:
+            A severe anxiety disorder that develops after experiencing trauma, marked by flashbacks, intrusive thoughts,
+            nightmares, and hypervigilance. Victims may feel constantly on edge, reliving the trauma repeatedly in their
+            mind.
+            Example: ‘I keep getting flashbacks of that night, and I can't sleep without nightmares.’ or ‘I can’t sleep
+            without waking up drenched in sweat after a nightmare.’
+            <br>
+            <br>
+            Format your response as follows, with ‘Yes’ or ‘No’ indicating the presence of each impact:
+            {PTSD: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+    <h3>Input Prompt (Anxiety)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing ‘Anxiety’
+            due to the violence they encountered. The symptoms of Anxiety is described as follows:
+            A state of excessive worry, fear, or nervousness that disrupts normal functioning. This may include
+            overthinking worst-case scenarios, avoiding social interactions, or experiencing physical symptoms like
+            rapid heartbeat.
+            Example: ‘I am so worried about what will happen next. 
+            <br>
+            <br>
+            Format your response as follows, with ‘Yes’ or ‘No’
+            indicating the presence of each impact:
+            {Anxiety: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post
+        </p>
+    </div>
+
+    <h2>Physical Health</h2>
+
+    <h3>System Prompt (Physical Health Impacts)</h3>
+    <div class="box">
+        <p>You are an expert natural language processing model specialized in analyzing texts related to sexual and
+            domestic violence on social media platforms like Reddit. You help in identifying the physical health impacts
+            of violence on victims. </p>
+    </div>
+
+    <h3>Visible Physical Injuries Prompt</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing ‘Visible
+            Physical Injuries’ due to the violence they encountered. The symptoms of Visible Physical Injuries are
+            described as follows : Physical evidence of harm, such as bruises, fractures, or scars, resulting from
+            abuse. For Example: I have scars all over my arms after that night. 
+            <br>
+            <br>
+            Format your response as follows, with
+            ‘Yes’ or ‘No’ indicating the presence of each impact:
+            {Visible Physical Injuries: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+    <h2>Behavioural Consequences</h2>
+
+    <h3>System Prompt (Behavioral Consequences)</h3>
+    <div class="box">
+        <p>You are an expert natural language processing model specialized in analyzing texts related to sexual and
+            domestic violence on social media platforms like Reddit. You help in identifying the behavioural impacts of
+            violence on the victims. </p>
+    </div>
+
+    <h3>Input Prompt (Self-harming/Suicidal)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing
+            ‘Self-harming/Suicidal’ due to the violence they encountered.
+            The symptoms of Self-harming/Suicidal is described as follows:
+            Thoughts of suicide, suicide attempts, or self-harming behaviors as a result of overwhelming emotional pain
+            caused by violence or abuse. Victims may feel trapped, hopeless, or unable to escape their suffering.
+            Example: ‘I’ve thought about ending it all because of the violence, and I feel like I don’t deserve to
+            live.’ 
+            <br><br>
+            Format your response as follows, with ‘Yes’ or ‘No' indicating the presence of each impact:
+            {Self-harming/Suicidal: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+    <h2>Economic Consequences</h2>
+
+    <h3>System Prompt (Economic Consequences)</h3>
+    <div class="box">
+        <p>You are an expert natural language processing model specialized in analyzing texts related to sexual and
+            domestic violence on social media platforms like Reddit. You help in identifying the economic consequences
+            of violence on the victims. </p>
+    </div>
+
+    <h3>Input Prompt (Financial Instability)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing
+            ‘Financial Instability’ due to the violence they encountered. The symptoms of Financial Instability is
+            described as follows:
+            Economic challenges resulting from job loss or increased expenses caused by the abuse. Victims may struggle
+            to regain independence or cover basic needs.
+            Example: ‘I lost my job and can’t afford rent because of the time I took off to recover.’ 
+            <br>
+            <br>
+            Format your
+            response as follows, with ‘Yes’ or ‘No’ indicating the presence of each impact:
+            {Financial Instability: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+    <h3>Input Prompt (Legal Barriers)</h3>
+    <div class="box">
+        <p>Your task is to analyze the following Reddit post and determine if the victim mentions experiencing ‘Legal
+            Barriers' due to the violence they encountered. The symptoms of Legal Barriers is described as follows:
+            Complications in navigating legal systems to obtain justice or protection, including lack of resources,
+            intimidating processes, or inadequate support. Example: ‘I went to the police to file a complaint, but they
+            didn’t take me seriously because I had no proof of the abuse.’ 
+            <br><br>
+            Format your response as follows, with ‘Yes’
+            or ‘No’ indicating the presence of each impact:
+            {Legal Barriers: Yes/No}
+            ONLY return this format and no other text. This is the input Reddit post:
+        </p>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
